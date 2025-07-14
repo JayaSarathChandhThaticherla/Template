@@ -1,0 +1,50 @@
+# Ignore build output folders
+bin/
+obj/
+
+# Visual Studio temporary files, build results, and
+# user-specific files
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# NuGet package caches
+*.nupkg
+packages/
+.nuget/
+
+# ASP.NET temporary files
+wwwroot/
+
+# Rider project files
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# dotnet watch files
+dotnet-watch.json
+
+# JetBrains Rider caches and local history
+.idea/
+.idea_modules/
+
+# Other files you might want to ignore
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.exe
+*.dll
+*.cache
