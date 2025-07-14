@@ -23,7 +23,7 @@ namespace Server.Controllers
         public IActionResult Test2()
         {
             _logger.LogInformation("Test2 endpoint hit");
-            _logger.LogError("This is a test2 error log");
+            _logger.LogError("This is a test2 error log")
             return Ok("Test2 successful");
         }
     }
