@@ -1,0 +1,33 @@
+name: .NET Build and Test
+
+on:
+  push:
+    branches:
+      - main
+      - Development
+
+  pull_request:
+    branches:
+      - main
+      - Development
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: "8  .0.x"
+
+      - name: Restore dependencies
+        run: dotnet restore ./Server
+
+      - name: Build
+        run: dotnet build ./Server --no-restore --configuration Release
+
+      - name: Run tests
+        run: dotnet test ./Server --no-build --verbosity normal
