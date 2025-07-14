@@ -27,6 +27,6 @@ namespace Server.Models
         // It's crucial for security that this stores a hashed value, not plain text.
         [Required] // Ensures this field is not null/empty in the database
         [StringLength(255)] // Hashed passwords are typically longer, ensure enough space
-        public string Password { get; set; } = string.Empty; // Re-added initializer
+        public string Password { get; set; } = string.Empty;
     }
 }
